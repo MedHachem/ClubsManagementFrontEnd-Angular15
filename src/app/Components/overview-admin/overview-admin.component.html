@@ -1,0 +1,172 @@
+  
+      <div class="flex">
+        <div class="flex-initial w-2/4 ...">
+           <div class="grid w-full flex-grow card rounded-box ml-6 mt-2  ">
+              <div class=" w-full ml-1  rounded pb-3 " style="background-image: url('assets/images/admin1.svg');">
+                  <div class="text-center justify-center  text-gray-700">
+                      <div class="flex flex-wrap">
+                        
+  
+                              <div class="w-full md:w-2/4  mb-10 md:mb-0">
+                               <h3 class="mb-1 text-2xl mt-10 font-bold text-gray-600">
+                                 
+                                  <span class="text-blue-400">Welcome back,</span>
+                                  <span>Hachem! </span>
+                                 
+                               </h3>
+                               
+                               <span class="mb-8 md:mb-16 text-sm font-medium text-indigo-300">New offers are wainting for you.</span>
+                               <div  routerLink='/Dashboard/FindJob' class="flex flex-wrap gap-x-1 items-center ml-24 mt-1">
+                                <span class="mb-1 text-white cursor-pointer">Explore more</span>
+                                <button class=" text-gray-800 font-bold py-1 px-1 rounded-full inline-flex items-center">
+                                 <mat-icon class="icon ">arrow_right_alt</mat-icon>          
+                             </button>
+                               </div>
+                              
+                              
+                               
+                               
+                              </div>
+                              
+                                  <div class="w-full md:w-2/4 flex items-end">
+                                    
+                                            <img class="mx-auto h-56" src="assets/images/admin.svg" alt="">                                  </div>
+                                   </div>
+                      </div>
+                                    
+                  </div>
+              </div>
+        </div>
+        <div class="flex-initial w-2/4 ...">
+           <div class="stats w-64 shadow ml-12 mt-1  mb-5">
+              <div class="stat bg-blue-100 hover:bg-blue-300">
+                  <div class="stat-figure  text-blue-400">
+                     <mat-icon>work_outline</mat-icon>
+                  </div>
+                    <div class="stat-title text-blue-800">Total Clubs</div>
+                    <div class="stat-value text-blue-400">{{nbrclubs}}</div>
+                    <div class="stat-desc">21% more than last month</div>
+              </div> 
+      </div>     
+      <div class="stats w-64 shadow mb-5 ml-12">  
+          <div class="stat bg-purple-100 hover:bg-purple-300">
+              <div class="stat-figure text-purple-400">
+               <mat-icon>turned_in_not</mat-icon>
+            </div>
+                <div class="stat-title text-purple-800">Total Events</div>
+                <div class="stat-value text-purple-400">{{nbrevents}}</div>
+                <div class="stat-desc">21% more than last month</div>
+          </div>
+      </div>
+      <div class="stats w-64 shadow mb-5 ml-12">
+      <div class="stat  bg-yellow-100 hover:bg-yellow-300">
+              <div class="stat-figure text-yellow-400">
+               <mat-icon> transfer_within_a_station</mat-icon>
+      
+            </div>
+                <div class="stat-title text-yellow-800">Total Users </div>
+                <div class="stat-value text-yellow-400">{{nbrusers}}</div>
+                <div class="stat-desc">21% more than last month</div>
+          </div> 
+      </div>
+      <div class="stats w-64 shadow mb-5 ml-12">    
+          <div class="stat  bg-green-100 hover:bg-green-300">
+              <div class="stat-figure text-green-400">
+               <mat-icon>euro_symbol</mat-icon>
+                </div>
+                <div class="stat-title  text-green-800">Earning</div>
+                <div class="stat-value text-green-400">15</div>
+                <div class="stat-desc">21% more than last month</div>
+          </div>  
+      </div>
+        </div>
+      
+      </div>
+      
+      <app-users></app-users>  
+       
+<div class="w-full xl:w-4/4 px-4">
+      <div class="relative flex flex-col min-w-0 break-words w-full mb-8  rounded-lg   text-blueGray-700">
+        <div class="flex flex-wrap">
+           <!-- bar Chart -->
+       <div class="w-4/6 px-4">
+          <div class="px-6 py-4 border-0">
+              <div class="flex flex-wrap items-center">
+                  <div class="relative w-full max-w-full flex-grow flex-1">
+                      <h3 class="font-bold text-lg text-blueGray-700">Some statistics: {{array}}</h3>
+                   </div>
+              </div>
+          </div>
+          
+          <canvas baseChart class="chart"
+          [data]="barChartData"
+         
+          [type]="barChartType"
+          
+         >
+  </canvas>
+      </div>  
+
+
+          <!-- pie Chart -->
+      <div class="w-2/6  px-4">
+       <div class="chart-container  mt-2">
+           <div class="px-6 py-4 border-0">
+               <div class="flex flex-wrap items-center">
+                 
+               </div>
+            </div>
+            <canvas baseChart class="chart"
+        [data]="pieChartData"
+        [type]="pieChartType"
+        >
+</canvas>
+     </div>
+     <h1 class="ml-36 mt-5  text-semibold text-blue-800 underline"> Roles PieChart</h1>
+     </div>   
+       </div> 
+        </div>
+</div>
+      <div class="flex">
+        <div class=" w-4/6 ">
+          
+        
+            <app-events></app-events>
+            
+            <app-club></app-club>
+       
+        </div>
+        
+       
+      </div>
+    
+    
+      
+  
+    
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            
+            
+            
+            
+        
+      

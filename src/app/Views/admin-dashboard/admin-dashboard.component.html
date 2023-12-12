@@ -1,0 +1,117 @@
+<mat-toolbar >
+  <mat-toolbar-row>
+    <button mat-icon-button class="menu-button" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a class="text-xl font-bold flex items-center ml-6 ">
+      
+      <img src="assets/images/Clubs&Events.svg" class="h-16 mr-1" alt="RecruitMe">
+     <span class="self-center whitespace-nowrap text-blue-900">Clubs&Activities</span>
+    
+     </a>
+     <form  method="GET" class="hidden md:block lg:pl-32 w-full">
+      <label for="voice-search" class="sr-only">Search</label>
+      <div class="relative  w-full">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+          </div>
+          <input type="text" id="voice-search" class="bg-white border border-gray-300 text-sm rounded-3xl block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for events , membres or  clubs" required>
+          <button type="button" class="absolute inset-y-0 right-0 flex z-0 items-center pr-3">
+              <svg aria-hidden="true" class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"></path></svg>
+          </button>
+      </div>
+    </form>
+    <div class="btncontainer flex items-center ml-4 space-x-4 ">
+     
+        
+       
+       
+         <div class="avatar online">
+          <div class="w-10 rounded-lg">
+            <img src="../../../assets/images/admin7.svg" />
+          </div>
+        </div>
+
+        <div class="relative inline-block ml-10">
+          <div>
+
+           <a [matMenuTriggerFor]="menu" class="relative flex  rounded-xl   cursor-pointer bg-base-200 py-2 px-2"> Hachem Mohamed<mat-icon>expand_more</mat-icon></a>
+
+           <mat-menu #menu="matMenu" yPosition="above" xPosition="before" >
+          
+             <div style="height: fit-content;" >
+               
+             </div>
+             <button mat-menu-item  type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+               <div class="inline-flex items-start">
+                 <mat-icon>settings</mat-icon>   Settings
+               </div>
+           </button>
+           <button mat-menu-item type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+               <div class="inline-flex items-center">
+                 <mat-icon>help</mat-icon>  Help
+               </div>
+           </button>
+           <button mat-menu-item type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+               <div class="inline-flex items-center">
+                 <mat-icon>logout</mat-icon>  Logout
+               </div>
+           </button>  
+    
+             </mat-menu>
+          </div>       
+          
+        </div>
+       
+   </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container >
+  <mat-sidenav #sidenav [opened]="screenWidth > 1000"   mode="side">
+    <mat-nav-list >
+   
+
+      <div class="n relative inline-block text-left ml-10">
+     
+        <div>
+          <div class="text-center">
+            <div class="avatar online">
+              <div class="w-10 rounded-lg">
+                <img src="../../../assets/images/admin7.svg" />
+              </div>
+            </div>
+            <p class="text-gray-500">Hachem Mohamed</p>
+          </div>
+          
+        </div>       
+        
+      </div>
+          <a routerLinkActive="activebutton"  routerLink="/AdminDashboard/OverviewAdmin" class="relative gap-x-2 flex items-center  rounded-xl  px-6 py-3 hover:bg-indigo-100 cursor-pointer"><mat-icon>dashboard</mat-icon> Overview</a>
+          <a  routerLinkActive="activebutton" routerLink="/AdminDashboard/users/list" class="relative mt-1 gap-x-2 flex items-center  rounded-xl  px-6 py-3 hover:bg-indigo-100 cursor-pointer"><mat-icon>card_travel</mat-icon> Users List </a>
+          <a routerLinkActive="activebutton"  routerLink="/AdminDashboard/users/add" class="relative mt-1 gap-x-2 flex items-center  rounded-xl  px-6 py-3 hover:bg-indigo-100 cursor-pointer"><mat-icon>add</mat-icon> Add User</a>
+
+          <a routerLinkActive="activebutton" routerLink="/AdminDashboard/events/list" class="relative mt-1 gap-x-2 flex items-center  rounded-xl  px-6 py-3 hover:bg-indigo-100 cursor-pointer "><mat-icon>list_alt</mat-icon> Events</a>
+         
+          <a routerLinkActive="activebutton" routerLink="/AdminDashboard/clubs/list"  class="relative mt-1 gap-x-2 flex items-center  rounded-xl  px-6 py-3 hover:bg-indigo-100 cursor-pointer ">	<mat-icon>group_work</mat-icon> Clubs </a>
+          <a routerLinkActive="activebutton" routerLink="/AdminDashboard/NewClub" class="relative mt-1 gap-x-2 flex items-center  rounded-xl  px-6 py-3 hover:bg-indigo-100 cursor-pointer "><mat-icon>add</mat-icon> New Club</a>
+
+          <a routerLinkActive="activebutton"  routerLink="/ClubDashboard/MyProfile" class="relative mt-1 gap-x-2 flex items-center  rounded-xl  px-6 py-3 hover:bg-indigo-100 cursor-pointer "><mat-icon>assignment_ind</mat-icon> My profil</a>
+           <div class="space-y-2 pt-2">
+            <hr>
+            <a routerLink="/Settings" class="relative gap-x-2 flex items-center  rounded-xl  px-6 py-3 hover:bg-indigo-100 cursor-pointer "><mat-icon>logout</mat-icon> Logout</a>
+           
+        
+         
+           </div>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content class="bg-gray-50">   
+       <router-outlet></router-outlet>
+      <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

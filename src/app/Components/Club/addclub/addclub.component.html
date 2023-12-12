@@ -1,0 +1,53 @@
+
+          
+    <div class="mt-5 ml-10 ">
+      
+        <div class="md:grid md:grid-cols-5 md:gap-6">
+          <div class="md:col-span-1">
+            <div class="px-4 sm:px-0">
+              <p class="mt-1 text-sm text-gray-600">Use a permanent basic informations where you can receive updates.</p>
+              <div class="card card-compact w-64 mt-5 py-5">
+                <figure><img src="assets/images/new.svg" /></figure>
+              </div>
+            </div>
+            
+          </div>
+          <div class="mt-5 md:col-span-4   shadow-sm rounded-md">
+            <form (ngSubmit)="saveClub()">
+                
+              
+              <div class="overflow-hidden shadow sm:rounded-md">
+                <div class="bg-white px-4 py-5 sm:p-6  shadow-xl">
+                  <div class="grid grid-cols-6 gap-6">
+                    <div class="form-group col-span-6 sm:col-span-3">
+                        <label for="user-name" class="block text-sm font-lg text-gray-700">name</label>                     
+                        <input type="text" name="username" [(ngModel)]="user.name"
+                        placeholder="Enter user name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    </div>
+                    <div class="form-group col-span-6 sm:col-span-3">
+                      <label for="first-name" class="block text-sm font-lg text-gray-700">Description</label>
+                      <input type="email" name="email" [(ngModel)]="user.description"
+                      placeholder="Enter user first" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>                    </div>
+      
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                    <button type="submit"  class="inline-flex button-btn justify-center rounded-md border border-transparent bg-orange-100 py-2 px-10  text-sm font-bold text-gray-700 shadow-sm hover:bg-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">Add Club</button>
+               
+                    <button type="submit" routerlink="/AdminDashboard/OverviewAdmin" class="ml-5 inline-flex justify-center rounded-md border border-transparent bg-red-100 py-2 px-10  text-sm font-bold text-gray-700 shadow-sm hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Return</button>
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+    
+     
+
+
+
+
+
+

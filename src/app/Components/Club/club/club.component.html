@@ -1,0 +1,60 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w-full xl:w-4/4 px-4">
+    <div class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg  bg-base-200 text-blueGray-700">
+            <div class="px-6 py-4 border-0">
+                <div class="flex flex-wrap items-center">
+                    <div class="relative w-full max-w-full flex-grow flex-1">
+                       <h3 class="font-bold text-lg text-blueGray-700 ">Clubs Resume list:</h3>
+                       
+                    </div>
+                    <div class="card-actions justify-end py-2 pr-2">
+  
+                      <button routerLink="/AdminDashboard/clubs/list" class="bg-orange-100 hover:bg-orange-200 text-gray-800 font-bold py-2 px-4 rounded-xl inline-flex items-center">
+                        <span class="mb-1">Explore more</span>  <mat-icon class="icon">arrow_right_alt</mat-icon>          
+                      </button>
+                   </div>
+                 </div>                                
+            </div>                           
+            <div class="block w-full overflow-x-auto">
+                <table class="items-center w-full bg-white border-collapse">
+                   <thead>
+                      <tr class="bg-blue-100">
+                         <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200">Id</th>
+                         <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200">Title </th>
+                         <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200">Description </th>
+
+                      </tr>
+                   </thead>
+                   <tbody>
+                    <tr *ngFor="let x of clubs">
+                      <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                        <div class="flex items-center">{{x.id}}</div>
+                     </td>
+                         <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            <div class="flex items-center"><span class=" font-bold NaN">{{x.name}}</span></div>
+                         </td>
+                         <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            <div class="flex items-center">{{x.description}}</div>
+                         </td>
+                        
+                     
+                      </tr>
+                     
+                   </tbody>
+                </table> 
+             </div>                             
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,219 @@
+    <!-- resume table -->         
+    <div class="flex mt-5">
+        <div class="w-full">
+          <div class="flex flex-wrap">
+            <div class="w-full xl:w-4/4 px-4">
+                <div class="relative flex flex-col min-w-0 break-words w-full mb-8 rounded-lg  bg-indigo-100 text-blueGray-700">
+                        <div class="px-6 border-0">
+                            <div class="flex flex-wrap items-center">
+                                <div class="relative w-full max-w-full flex-grow flex-1">
+                                   <h3 class="font-bold text-xl text-blue-900 underline">Users Resume List :</h3>           
+                                </div>
+                                <div class="card-actions justify-end  ">
+                                
+                                  <div class=" flex justify-center items-center mt-3 ">
+                                    <div class="container mx-auto  rounded-lg  py-2">
+                                      <form>
+                                       
+                                          <div class="sm:flex gap-x-10 items-center  bg-white rounded-xl overflow-hidden py-1  justify-between">
+                                            <input #input  matInput (keyup)="applyFilter($event)"  class="text-gray-900 pr-10 pl-2 bg-white  py-2  rounded-lg text-gray-800 flex-grow outline-none px-2 " type="text" placeholder="Search for users .." />
+                                            <div class="ms:flex items-start px-2 rounded-lg space-x-4 mx-auto ">
+                                              
+                                                   <mat-icon class= "  font-bold mt-2 ">search</mat-icon>
+                                           
+                                            </div>
+                                          </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                               </div>
+                             </div>                                
+                        </div>                           
+                        <div class="block w-full  overflow-x-auto">
+                          <table mat-table [dataSource]="dataSource" matSort class="items-center w-full bg-white hover:bg-base-200 border-collapse">
+       
+                            
+                        
+                            <ng-container matColumnDef="id">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200"> Id </th>
+                              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" mat-cell *matCellDef="let row">
+                                <div class="flex items-center"><span class=" font-bold NaN">{{row.id}}</span></div>
+             
+                              </td>
+                            </ng-container>
+                            <ng-container matColumnDef="email">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200"> email </th>
+                                 
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" mat-cell *matCellDef="let row">
+                                      
+                                   {{row.email}}  
+                                
+                                </td>
+                              </ng-container>
+                              <ng-container matColumnDef="enabled">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200"> enabled </th>
+                                 
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" mat-cell *matCellDef="let row">
+                                      
+                                  <div class="flex items-center">
+                               
+                                    <div class="relative w-full"  *ngIf="!row.enabled">
+                                       <div class="overflow-hidden p-1  text-xs flex rounded-full bg-red-200">
+                                    
+                                         <span class="ml-2" > disabled </span>
+                                     
+                                       </div>
+                                    </div>
+                                    <div class="relative w-full"  *ngIf="row.enabled">
+                                     <div class="overflow-hidden p-1 text-xs flex rounded-full bg-green-200">
+                                           <span class="ml-2" > enabled </span>
+                                     </div>
+                                  </div>
+                                 </div> 
+                                
+                                </td>
+                              </ng-container>
+        
+                         
+      
+                            <ng-container matColumnDef="firstname">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200"> firstname </th>
+                               
+                              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" mat-cell *matCellDef="let row">
+                                    
+                                 {{row.firstname}}  
+                              
+                              </td>
+                            </ng-container>
+                            
+                            <ng-container matColumnDef="lastname">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200"> lastname </th>
+                                 
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" mat-cell *matCellDef="let row">
+                                      
+                                   {{row.lastname}}  
+                                
+                                </td>
+                              </ng-container>
+                             
+                              
+             
+                        
+                        
+                              <ng-container matColumnDef="username">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200"> Username </th>
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" mat-cell *matCellDef="let row"> 
+                                  {{row.username}}
+          
+                                   </td>
+                              </ng-container>
+                        
+                              <ng-container matColumnDef="action" >
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200"> Action </th>
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" mat-cell *matCellDef="let row"> 
+                                  <div class="flex item-center justify-start">
+                                    <div class="w-4 mr-2 transform hover:text-green-500 hover:scale-110 cursor-pointer">
+                                      <a routerLink="/AdminDashboard/user/{{row.id}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        </svg>
+                                      </a>
+                                    </div>
+                                    <div class="w-4 mr-2 transform hover:text-blue-500 hover:scale-110 cursor-pointer">
+                                      <label routerLink="/AdminDashboard/updateUser/{{row.id}}" for="my-modal-3" class="cursor-pointer" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        </svg>
+                                      </label>
+                                    </div>
+                                    <!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal-3" class="modal-toggle" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold text-red-400 text-lg">Are you sure for updating this user data!</h3>
+  
+    <div class="flex gap-x-12">
+      <div class="modal-action">
+        <label for="my-modal-6" routerLink="/AdminDashboard/updateUser/{{row.id}}" class="btn text-green-900 bg-green-200 " >Yes I'm sure!</label>
+      </div>
+      <div class="modal-action">
+        <label for="my-modal-6" (click)="reloadPage()" class="btn text-red-900 bg-red-200" >No,I'm Not!</label>
+      </div>
+    </div>
+    </div>
+   
+</div>
+                                    <div class="w-4 mr-2 transform hover:text-red-500 hover:scale-110 cursor-pointer">
+                                      <a (click)="deleteUser(row.id)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                      </a>
+                                    </div>
+                                </div>
+                                  {{row.action}}
+                                 </td>
+                              </ng-container>
+                          
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                              <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                            <tr class="mat-row" *matNoDataRow>
+                              
+                                <td class="border-t-0 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap" class="mat-cell" colspan="4">
+                                 
+                                  <section class="bg-white dark:bg-gray-900 ">
+                                    <div class="container  px-12 mx-auto lg:flex lg:items-center lg:gap-12">
+                                        <div class="w-5/6 lg:w-full">
+                                            <h6 class="text-lg font-bold text-blue-500 dark:text-blue-400">No Results found!</h6>
+                                            <p class=" text-gray-700 dark:text-gray-400">Sorry,We couldn't find "{{input.value}}" in your users list.</p>
+                                            <div class="space-y-6">
+                                                <div>
+                                                    <a class="inline-flex items-center text-sm text-blue-300 gap-x-2 dark:text-blue-400 ">
+                                                      Please try searching again..                       
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 rtl:rotate-180">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="relative w-1/6  lg:w-full lg:mt-3 mb-1">
+                                            <img class=" w-full lg:h-[12rem] h-32 md:h-32 rounded-lg object-cover " src="assets/images/no.svg" alt="">
+                                        </div>
+                                    </div>
+                                </section>
+                                 </td>
+                              </tr>
+                          </table>
+                          <mat-paginator [pageSizeOptions]="[1]" class=" bg-base-100 " aria-label="Select page of users"></mat-paginator>                           
+
+                         </div>  
+                </div>
+                
+            </div>
+                                      
+        </div> 
+      </div>   
+      
+<!-- The button to open modal -->
+
+
+
+

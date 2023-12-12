@@ -1,0 +1,181 @@
+  
+      <div class="flex">
+        <div class="flex-initial w-2/4 ...">
+           <div class="grid w-full flex-grow card rounded-box ml-6 mt-2  ">
+              <div class=" w-full ml-1  rounded pb-3 " style="background-image: url('assets/images/vert (2).svg');">
+                  <div class="text-center justify-center  text-gray-700">
+                      <div class="flex flex-wrap">
+                        
+  
+                              <div class="w-full md:w-2/4  mb-10 md:mb-0">
+                               <h3 class="mb-1 text-2xl mt-10 font-bold text-white">
+                                 
+                                  <span class="text-green-200">Welcome back,</span>
+                                  <span>Hachem! </span>
+                                 
+                               </h3>
+                               
+                               <span class="mb-8 md:mb-16 text-sm font-medium text-indigo-100">New events are wainting for you.</span>
+                               <div  routerLink='/Dashboard/FindJob' class="flex flex-wrap gap-x-1 items-center ml-24 mt-1">
+                                <span class="mb-1 text-white cursor-pointer">Explore more</span>
+                                <button class=" text-gray-800 font-bold py-1 px-1 rounded-full inline-flex items-center">
+                                 <mat-icon class="icon ">arrow_right_alt</mat-icon>          
+                             </button>
+                               </div>
+                              
+                              
+                               
+                               
+                              </div>
+                              
+                                  <div class="w-full md:w-2/4 flex items-end">
+                                    
+                                            <img class="mx-auto h-56" src="assets/images/Sans titre (15).svg" alt="">                                  </div>
+                                   </div>
+                      </div>
+                                    
+                  </div>
+              </div>
+        </div>
+        <div class="flex-initial w-2/4 ...">
+           <div class="stats w-64 shadow ml-12 mt-1  mb-5">
+              <div class="stat bg-blue-100 hover:bg-blue-300">
+                  <div class="stat-figure  text-blue-400">
+                     <mat-icon>work_outline</mat-icon>
+                  </div>
+                    <div class="stat-title text-blue-800">Total Events</div>
+                    <div class="stat-value text-blue-400">5</div>
+                    <div class="stat-desc">21% more than last month</div>
+              </div> 
+      </div>     
+     
+      <div class="stats w-64 shadow mb-5 ml-12">
+      <div class="stat  bg-yellow-100 hover:bg-yellow-300">
+              <div class="stat-figure text-yellow-400">
+               <mat-icon> transfer_within_a_station</mat-icon>
+      
+            </div>
+                <div class="stat-title text-yellow-800">Total membres </div>
+                <div class="stat-value text-yellow-400">15</div>
+                <div class="stat-desc">21% more than last month</div> 
+          </div> 
+      </div>
+      
+      <div class="stats w-64 shadow mb-5 ml-12">    
+         <div class="stat  bg-green-100 hover:bg-green-300">
+             <div class="stat-figure text-green-400">
+              <mat-icon>euro_symbol</mat-icon>
+               </div>
+               <div class="stat-title  text-green-800">Earning</div>
+               <div class="stat-value text-green-400">15</div>
+               <div class="stat-desc">21% more than last month</div>
+         </div>  
+     </div>
+       
+    
+
+       
+       </div>
+
+
+        </div>
+      <app-events></app-events>
+      <app-membres></app-membres>  
+      <div class="flex">
+        <div class=" w-4/6 ">
+         <div class="flex">
+         <div class="w-1/2 max-w-sm flex flex-col rounded-lg ml-10  overflow-hidden bg-white shadow my-2">
+
+            <canvas baseChart class="chart"
+            [data]="radarChartData"
+            [options]="radarChartOptions"
+            [type]="radarChartType">
+    </canvas>
+        
+         </div>
+         <div class="w-1/2 max-w-sm flex flex-col rounded-lg ml-10  overflow-hidden bg-white shadow my-2">
+            <canvas baseChart class="chart"
+            [data]="lineChartData"
+            [options]="lineChartOptions"
+            [type]="lineChartType"
+            ></canvas> 
+        
+         </div>
+      </div>
+        </div>
+          <div class="flex-initial w-2/6 ...">
+            <div class="max-w-sm flex flex-col rounded-lg ml-10  overflow-hidden bg-white shadow my-2">
+               <div class="flex flex flex-wrap p-4">
+                  <div>
+                   <h1 class="text-xl font-bold tracking-tight text-gray-900">Latest Events:</h1>
+                   <small class="font-medium text-xs text-gray-500 flex justify-start" >with brief details.</small> 
+                   
+                 </div>  
+                 <div class="card-actions justify-end py-2 pr-2 ml-16">
+         
+                  <button routerLink="/ClubDashboard/events" class="bg-orange-100 hover:bg-orange-200 text-gray-800 font-bold py-2 px-4 rounded-xl inline-flex items-center">
+                    <span class="mb-1">Find more</span>  <mat-icon class="icon">arrow_right_alt</mat-icon>          
+                  </button>
+               </div>
+               </div>
+               
+         
+               <hr>     
+               <div *ngFor="let x of events"  class=" py-4">
+                  <div class="flex   gap-x-1">
+                     <button class="inline-flex items-center justify-center w-16 h-16 ml-2 text-blue-100 bg-base-200 rounded-lg">
+                        <img src="../../assets/images/Sans titre (16).svg"  class="w-32 h-32" alt="">
+                     </button> 
+                     
+                     <div>
+                        <span class="text-sm font-semibold mb-7">{{x.title}}</span>
+                        <span *ngFor="let c of x.clubs" class="bg-indigo-600/5 text-teal-700 text-xs text-center font-bold rounded h-5 ml-2"> {{c.name}}</span>
+                        <div class="flex flex-wrap gap-x-1 gap-y-1 ">
+                           <small class="font-medium text-xs text-gray-500 flex justify-start text-slate-400 "  >{{x.date}}</small> 
+                           <small class="font-medium text-xs text-gray-500 flex justify-start text-slate-400 ">$950 - ${{x.price}}/mo</small>      
+                           <small class="font-medium text-xs text-gray-500 flex justify-start text-slate-400" >  1 day ago</small>              
+                         </div>             
+                     </div>    
+                   </div>         
+               </div>
+              
+               
+               <hr>     
+            
+             
+              
+             </div>
+           
+         </div>
+      </div>
+       
+     
+      
+  
+    
+  
+     
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            
+            
+            
+            
+        
+      

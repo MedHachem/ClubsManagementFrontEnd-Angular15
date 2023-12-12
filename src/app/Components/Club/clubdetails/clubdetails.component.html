@@ -1,0 +1,75 @@
+<section class=" pb-24">            
+    <div *ngIf="us" class="grid grid-cols-2 pt-3 justify-center gap-x-8 gap-y-0 lg:grid-cols-2">             
+        <div  class=" rounded-lg flex col-span-1">
+          <div   class="border-b border-gray-200 py-2">
+            <div class="rounded-xl border   p-2 w-full bg-white ">
+              <div class="flex w-full items-center justify-between border-b pb-3">
+                <div class="flex items-center space-x-3">
+                  <div class="h-12 w-12 rounded bg-slate-400 bg-cover "></div>                      
+                 <div class="grid grid-cols-1 gap-1">
+                  <h3 class="  font-bold">{{us.name}}</h3>
+                 
+                  <span class="title h5 bg-indigo-600/5 left-0 text-indigo-600 text-xs font-bold py-0.5  rounded h-5"></span>       </div>
+                </div>
+                
+                
+              </div>
+            <div class="mt-4 mb-6">        
+              <div class="mb-3 "> <h1 class="text-xl font-semibold cursor-pointer hover:underline" routerLink="/Dashboard/JobDetails"></h1>
+                <small ></small>       
+                <small >  </small> 
+                <small  ></small>
+            </div>     
+            
+              <div class="text-sm text-gray-600">{{us.description}}</div>
+            </div>
+            <div>
+              <hr>
+              <div class="flex items-center justify-between text-slate-500 pt-2">
+                <div class="flex space-x-8 md:space-x-8">
+                  <div class="mb-3 text-xl text-gray-800">  <small >en DT</small></div>
+                  <div class="mb-3 text-md ">  <small > people applied</small></div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    
+                    <button class="bg-blue-100 hover:bg-blue-200 text-blue-600 font-semibold py-2 px-2 rounded-xl" type="button">
+                        <span class="relative  text-sm  "> Apply now </span> 
+                    </button>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          
+       
+          
+            
+          
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+    </div>
+   
+
+  </section>

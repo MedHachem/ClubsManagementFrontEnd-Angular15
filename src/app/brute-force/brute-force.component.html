@@ -1,0 +1,70 @@
+<div class="min-w-screen min-h-screen bg-base-300 flex items-center justify-center px-5 " >
+  <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
+      <div class="md:flex w-full">
+          <div class="hidden md:block w-6/12 bg-cover py-10 px-12" style="background-image: url('assets/images/vert (2).svg');">
+              <div class="w-full  z-10">
+                  <h1 class="text-3xl font-bold text-white tracking-wide">Welcome <span class="text-green-200">To CyberSecurity</span> Project <span class="text-indigo-200"> .</span>  </h1>
+              </div>
+       <img src="assets/images/l.svg" alt="login" class="mt-12  w-80">
+</div>
+          <div class="w-full md:w-6/12 py-10 px-5 md:px-10">
+              <div class="text-center mb-10">
+                  <a class="text-xl font-bold flex items-center ml-6 ">
+
+
+                     <span class="self-center font-bold text-3xl  whitespace-nowrap text-blue-900">Analyseur de mots de passes</span>
+
+                     </a>
+                  <p>Enter your informations to connect </p>
+              </div>
+              <h2 class="font-bold text-2xl text-[#002D74]">Password Analyzer</h2>
+              <div class="form-group">
+                <label for="passwordInput">Enter your password:</label>
+                <input type="password" class="mt-1   p-2 py-2 block w-full border-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" id="passwordInput" [(ngModel)]="password" />
+              </div>
+
+              <button  class="mt-1   p-2 py-2 block w-full border-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" (click)="analyzePassword()">Analyze Password</button>
+
+              <div *ngIf="analysisResult">
+                <h4 class="mt-3">Analysis Result:</h4>
+                <p class="alert alert-warning mt-5">{{ analysisResult }}</p>
+              </div>
+
+              <div *ngIf="suggestedPassword">
+                <h4 class="mt-3">Suggested Strong Password:</h4>
+                <p class="alert alert-warning mt-5">{{ suggestedPassword }}</p>
+              </div>
+              <form>
+
+
+
+
+
+
+
+
+
+              </form>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
