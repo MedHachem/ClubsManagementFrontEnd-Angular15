@@ -1,8 +1,13 @@
 # ClubsEnicar
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
-
+# Interfaces
 ![image](https://github.com/MedHachem/ClubsManagementFrontEnd-Angular15/assets/99909231/a72fce0d-e042-4337-9dd8-ef392e50a151)
+![image](https://github.com/MedHachem/ClubsManagementFrontEnd-Angular15/assets/99909231/b261739e-bfd7-4e3a-b56c-8945aff3e01b)
+![image](https://github.com/MedHachem/ClubsManagementFrontEnd-Angular15/assets/99909231/1e87a315-a64a-4703-859f-c3bc794a6756)
+![image](https://github.com/MedHachem/ClubsManagementFrontEnd-Angular15/assets/99909231/49137a53-1715-4af8-846d-440190ea2589)
+
+
 
 
 ## Development server
