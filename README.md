@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
+![image](https://github.com/MedHachem/ClubsManagementFrontEnd-Angular15/assets/99909231/a72fce0d-e042-4337-9dd8-ef392e50a151)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
