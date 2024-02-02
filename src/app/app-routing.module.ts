@@ -27,11 +27,9 @@ import { AddMembreComponent } from './Components/Membre/add-membre/add-membre.co
 import { UpdateuserComponent } from './Components/Users/updateuser/updateuser.component';
 import { UpdateClubComponent } from './Components/Club/update-club/update-club.component';
 import { UpdateventComponent } from './Components/updatevent/updatevent.component';
-import { BruteForceComponent } from './brute-force/brute-force.component';
 
 const routes: Routes = [
-  {path:'',component:LoginComponent},
-  {path:'b',component:BruteForceComponent},
+
   {path:'login',component:RegistrationComponent},
 
   {path:'events/list',component:EventslistfilterComponent},

@@ -8,8 +8,8 @@ import { LoginComponent } from './Views/login/login.component';
 import { RegistrationComponent } from './Views/registration/registration.component';
 import { AdminDashboardComponent } from './Views/admin-dashboard/admin-dashboard.component';
 import { ClubPresidentDashboardComponent } from './Views/club-president-dashboard/club-president-dashboard.component';
-import { MatTableModule } from '@angular/material/table'  
-import { MatCard, MatCardModule, } from '@angular/material/card'; 
+import { MatTableModule } from '@angular/material/table'
+import { MatCard, MatCardModule, } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -58,7 +58,7 @@ import { ListMembresComponent } from './Components/Membre/list-membres/list-memb
 import { UpdateuserComponent } from './Components/Users/updateuser/updateuser.component';
 import { UpdateClubComponent } from './Components/Club/update-club/update-club.component';
 import { UpdateventComponent } from './Components/updatevent/updatevent.component';
-import { BruteForceComponent } from './brute-force/brute-force.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,8 +90,7 @@ import { BruteForceComponent } from './brute-force/brute-force.component';
     ListMembresComponent,
     UpdateuserComponent,
     UpdateClubComponent,
-    UpdateventComponent,
-    BruteForceComponent
+    UpdateventComponent
   ],
   imports: [
     BrowserModule,
@@ -113,9 +112,9 @@ import { BruteForceComponent } from './brute-force/brute-force.component';
     }),
   ],
   providers: [
-    
+
     { provide: NgChartsConfiguration, useValue: { generateColors: false }},
-    
+
   ],
   bootstrap: [AppComponent]
 })
